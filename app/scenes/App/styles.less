@@ -1,0 +1,150 @@
+@import "~antd/dist/antd.less";
+
+#app {
+  height: 100%;
+}
+
+@bg: #fff;
+@text: #179fce;
+@scroll-up-duration: 0.5s;
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: @bg;
+}
+
+* {
+  font-weight: 300;
+  font-family: sans-serif;
+}
+
+.layout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.layout--content {
+  width: 100%;
+  top: 50%;
+  margin-top: -175px;
+  position: absolute;
+  transition: @scroll-up-duration;
+}
+
+.layout.started {
+  .layout--content--start-button {
+    transition-duration: 0.1s;
+    opacity: 0;
+  }
+
+  .layout--content {
+    top: 0;
+    margin-top: 0;
+  }
+
+  .layout--content--h1, .layout--content--h2 {
+    text-align: center;
+    transition-delay: @scroll-up-duration !important;
+    transition-duration: 0.25s !important;
+    color: @bg;
+  }
+
+  .layout--hello {
+    transition-delay: @scroll-up-duration;
+    transition-duration: .2s;
+    background: @text;
+  }
+
+  .animation-show-2, .animation-show-3 {
+    transition-delay: 0s;
+  }
+
+  .layout--form {
+    transition-delay: @scroll-up-duration;
+    transition-duration: .2s;
+    opacity: 1;
+  }
+
+  .layout--content--h1 {
+    svg {
+      path {
+        transition-delay: @scroll-up-duration !important;
+        transition-duration: @scroll-up-duration !important;
+        fill: #fff !important;
+      }
+      rect {
+        transition-delay: @scroll-up-duration !important;
+        transition-duration: @scroll-up-duration !important;
+        fill: #fff !important;
+      }
+    }
+  }
+
+}
+
+svg path, svg rect {
+  transition-delay: @scroll-up-duration;
+  transition-duration: .2s;
+}
+
+.layout--content--h1, .layout--content--h2 {
+  text-align: center;
+  color: @text;
+}
+
+.layout--content--h1 {
+  opacity: 0;
+  font-size: 72px;
+}
+
+.layout--content--h2 {
+  opacity: 0;
+  font-size: 32px;
+}
+
+.layout--content--start-button {
+  opacity: 0;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.animation-show {
+  opacity: 1;
+  transition-duration: 1s;
+}
+
+.animation-show-1 {
+  transition-delay: 0s;
+}
+
+.animation-show-2 {
+  transition-delay: 1s;
+}
+
+.animation-show-3 {
+  transition-delay: 2s;
+}
+
+.switch-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.switch-wrapper > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.layout--form {
+  opacity: 0;
+  width: 600px;
+  margin: 20px auto;
+}
+
+
