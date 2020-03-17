@@ -47,7 +47,7 @@
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
     "lodash": "^4.17.10",
-    "minimist": "1.2.0",
+    "minimist": "1.2.2",
     "postcss-loader": "^3.0.0",
     "prop-types": "15.6.1",
     "rc-util": "^4.6.0",
